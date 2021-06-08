@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+.encabezado{
+    background-color: rgb(241, 241, 241);
+}
+
+.encabezado img{
+    width: 5rem;
+    margin-left: 1rem;
+}
+
+.login {
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+    background: url("/img/fondo.png"), -webkit-gradient(linear, right top, left top, from(#083b66), to(#2d6a9c));
+}
+
+.formulario-login{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin: 3rem auto;
+    background-color:rgb(241, 241, 241);
+    padding: 2rem;
+}
+
+
