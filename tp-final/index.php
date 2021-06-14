@@ -1,5 +1,5 @@
 <?php
-    include_once ("Config.php");
+    include_once ("helpers/Config.php");
     $database = Config::createDataBase();
 
     /*

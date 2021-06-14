@@ -10,7 +10,7 @@ class Config{
     }
 
     private static function getConfigurationParameters(){
-        return parse_ini_file("config.ini");
+        return parse_ini_file("./Config/config.ini");
     }
 
 }
