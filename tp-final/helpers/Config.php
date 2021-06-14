@@ -2,7 +2,6 @@
 
 
 class Config{
-
     public static function createDataBase(){
         include_once "DataBase.php";
         $config = self::getConfigurationParameters();
@@ -10,7 +9,8 @@ class Config{
     }
 
     private static function getConfigurationParameters(){
-        return parse_ini_file("config.ini");
+     $configDb = "config.ini";
+        return parse_ini_file($configDb);
     }
 
 }
