@@ -1,0 +1,31 @@
+- siempre que haya dos cosas repetidas abstraerlo
+
+- Si hace dos responsabilidad sacarlo para que haga solo 1
+
+- a la hora 2 del video de mvc explica mustache para separar el php de html
+	Mustache
+	La clase Render tiene toda la configuracion que necesita mustache para crearse
+	Desde el archivo que se tiene la variable php con los datos se hace el 
+	
+	 $data["canciones"] = $this->model->obtenerCanciones();
+        echo $this->renderer->render( "view/cancionesView.php", $data );
+	
+	esto manda a esa vista esa informacion que esta en data y la vista la captura y la imprime en este caso una tabla
+
+	<table class="w3-table">
+        	{{#cancion}}
+        	<tr>
+            		<td>{{nombre}}</td>
+            		<td>{{duracion}}</td>
+        	</tr>
+        	{{/cancion}}
+   	 </table>
+
+	Dentro de la carpeta vista hay una que tiene el parcial que lo que tiene son vistas parciales , por ejemplo
+	como el header o footer que son una parte del codigo.
+	En esos casos se saca el .php y se pone de extension .mustache
+
+	y para incluirlos colocamos en el codigo lo siguiente:
+	{{> header}}  {{> footer}}
+
+
