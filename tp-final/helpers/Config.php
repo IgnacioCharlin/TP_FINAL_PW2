@@ -9,8 +9,9 @@ class Config{
     }
 
     private static function getConfigurationParameters(){
-     $configDb = "config.ini";
-        return parse_ini_file($configDb);
+
+        return parse_ini_file("./Config/config.ini");
+
     }
 
 }
