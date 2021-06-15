@@ -2,24 +2,20 @@
 
 
 class Config{
-    public static function createDataBase(){
-        include_once "DataBase.php";
-        $config = self::getConfigurationParameters();
-        return new DataBase($config["servername"],$config["usermame"],$config["password"],$config["dbname"]);
-    }
+    private $config;
+
+   public function __construct($configDB)
+   {
+       $this->config = parse_ini_file($configDB, true);
+   }
 
     private static function getConfigurationParameters(){
 
         return parse_ini_file("./Config/config.ini");
 
     }
-
-    public static function createRender()
-    {
-        include_once ('./third-party/mustache/src/Mustache/Autoloader.php');
-        include_once ("Render.php");
-
-       return new Render('./View/partial');
+    public function get($section,$key){
+        return $this->config[$section][$key];
     }
 
 }

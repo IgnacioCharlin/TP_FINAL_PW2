@@ -1,6 +1,13 @@
 <?php
 
 class Router{
+   /* private $configuration;
+
+    public function __construct($configuration)
+    {
+        $this->configuration = $configuration;
+    }*/
+
     public static function executeActionFromController($moduleInitializer, $module, $action){
         $controller = self::createControllerFrom($moduleInitializer, $module);
         self::executeActionFrom($controller, $action);
