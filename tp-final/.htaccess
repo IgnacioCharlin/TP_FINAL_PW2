@@ -1,4 +1,7 @@
 <IfModule mod_rewrite.c>
+    php_flag display_startup_errors off
+    php_flag display_errors off
+    php_flag html_errors off
     RewriteEngine On
     RewriteBase /
     RewriteCond %{REQUEST_FILENAME} !-f

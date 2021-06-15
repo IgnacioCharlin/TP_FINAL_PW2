@@ -11,7 +11,7 @@ class Render{
         ));
     }
 
-    public function render($contentFile , $data = array() ){
+    public function render($contentFile , $data = array('planet' => 'World') ){
         $contentAsString =  file_get_contents($contentFile);
         return  $this->mustache->render($contentAsString, $data);
     }

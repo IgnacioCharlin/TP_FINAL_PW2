@@ -14,6 +14,14 @@ class Config{
 
     }
 
+    public static function createRender()
+    {
+        include_once ('./third-party/mustache/src/Mustache/Autoloader.php');
+        include_once ("Render.php");
+
+       return new Render('./View/partial');
+    }
+
 }
 
 ?>

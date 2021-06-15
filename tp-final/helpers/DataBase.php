@@ -1,6 +1,6 @@
 <?php
 class DataBase{
-    private $connection;
+
 
     public function __construct($servername, $username, $password, $dbname){
         $this->connexion  = mysqli_connect($servername, $username, $password, $dbname)
