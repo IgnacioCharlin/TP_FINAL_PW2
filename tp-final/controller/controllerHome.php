@@ -16,6 +16,10 @@ class HomeController
         $data["datos"] = array();
         echo $this->render->render("View/homeView.php", $data);
     }
-
+    public function saludar()
+    {
+        $data["usuario"] = "nacho";
+        echo $this->render->render("View/homeView.php", $data);
+    }
 
 }

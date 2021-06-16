@@ -1,8 +1,8 @@
 <?php
-include_once("DataBase.php");
-include_once("Render.php");
-include_once("Config.php");
-require_once('./vendor/mustache/mustache/src/Mustache/Autoloader.php');
+include_once("helpers/DataBase.php");
+include_once("helpers/Render.php");
+include_once("helpers/Config.php");
+require_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 
 
 class ModuleInitializer
@@ -29,13 +29,15 @@ class ModuleInitializer
 
     public function createDefaultController()
     {
-        return $this->createHomeController();
+
+        return (isset($_SESSION["isLogin"]) ? $this->createHomeController() : $this->createLoginController());
     }
 
     public function createLoginController(){
+
         include_once("controller/LoginController.php");
 
-        return new LoginController($this->render);
+        return new LoginController($this->render, $this->database);
     }
 
 }

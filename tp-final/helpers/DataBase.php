@@ -14,6 +14,7 @@ class DataBase{
     public function query($sql){
         $result = mysqli_query($this->conection, $sql);
         $resultAsAssocArray = mysqli_fetch_all($result, MYSQLI_ASSOC);
+//        var_dump($resultAsAssocArray);
         return $resultAsAssocArray;
     }
     public static function createDatabaseFromConfig(Config $config){

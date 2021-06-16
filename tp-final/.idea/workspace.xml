@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4c2de36-e6bd-48a6-a660-fa35f26dfee9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ayudaMemoria.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ayudaMemoria.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/View/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/View/partial/header.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/Config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="c4c2de36-e6bd-48a6-a660-fa35f26dfee9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +20,12 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/mustache/mustache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1to3NbRYbHsZb7p8QGSxtRQxXI3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,6 +47,7 @@
       <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\helpers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs" />
       <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\helpers" />
       <recent name="C:\xampp\htdocs\TP_FINAL_PW2\tp-final\Config" />
     </key>
