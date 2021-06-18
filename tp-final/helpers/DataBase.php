@@ -25,5 +25,8 @@ class DataBase{
             $config->get("database","dbname")
         );
     }
+    public function insert($sql) {
+        return mysqli_query($this->conection, $sql);
+    }
 }
 ?>

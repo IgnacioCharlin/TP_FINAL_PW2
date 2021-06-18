@@ -14,16 +14,25 @@ class LoginModel
 
     public function validarUsuario($email, $contraseña)
     {
+        $msg["vista"] = "View/loginView.php";
         $listUsuarios = $this->database->query("SELECT * FROM usuario");
 
 
         foreach ($listUsuarios as $usuario){
-            if ($usuario["password"] == $contraseña && $usuario["name"] == $email){
-                $_SESSION["isLogin"] = true;
-                return "usuario ok";
+            if ($usuario["rol"] != "inactivo") {
+                if ($usuario["password"] == $contraseña && $usuario["name"] == $email) {
+                    $_SESSION["isLogin"] = true;
+                    $_SESSION["usuario"] = $usuario["name"];
 
-            }else{
-                return "no coincide";
+                    return header('location:/home/saludar');
+
+                } else {
+                    $msg["error"] =   "no coincide";
+                    return $msg;
+                }
+            } else {
+                $msg["error"] =  "usuario inactivo";
+                return $msg;
             }
         }
     }

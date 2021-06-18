@@ -20,7 +20,7 @@ class ModuleInitializer
 
     public function createHomeController()
     {
-//        include_once("model/PresentacionesModel.php");
+
         include_once("controller/controllerHome.php");
 
         $model = array();//$this->database;
@@ -38,6 +38,12 @@ class ModuleInitializer
         include_once("controller/LoginController.php");
 
         return new LoginController($this->render, $this->database);
+    }
+    public function createRegistrarController(){
+
+        include_once("controller/RegistrarController.php");
+
+        return new RegistrarController($this->render, $this->database);
     }
 
 }

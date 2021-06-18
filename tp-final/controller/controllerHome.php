@@ -18,7 +18,7 @@ class HomeController
     }
     public function saludar()
     {
-        $data["usuario"] = "nacho";
+        $data["usuario"] = $_SESSION["usuario"];
         echo $this->render->render("View/homeView.php", $data);
     }
 

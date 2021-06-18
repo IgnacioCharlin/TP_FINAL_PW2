@@ -23,14 +23,9 @@ class LoginController
         $email = $_POST["email"];
         $contraseña = $_POST["password"];
         $model = new LoginModel($this->database);
-        $res = $model->validarUsuario($email,$contraseña);
-        if ($res == "no coincide"){
-            $data["error"]= "credenciales erroneas";
-            echo $this->render->render("View/loginView.php", $data);
-        }else{
-            header('location:/home/saludar');
-            exit();
-        }
+        $result = $model->validarUsuario($email,$contraseña);
+
+        echo $this->render->render($result["vista"], $result);
 
     }
         public function cerrarSesion(){
